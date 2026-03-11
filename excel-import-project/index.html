@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Excel Import System</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<h2>Student Excel Import</h2>
+
+<div class="controls">
+
+<button onclick="downloadTemplate()">Download Excel Template</button>
+
+<input type="file" id="excelFile" accept=".xlsx,.xls">
+
+<button onclick="handleUpload()">Upload Excel</button>
+
+</div>
+
+<h3>Preview Data</h3>
+
+<table id="studentTable">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Marks</th>
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<h3 id="errorTitle">Validation Errors</h3>
+
+<ul id="errorList"></ul>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+<script src="js/excelService.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/uiController.js"></script>
+
+</body>
+</html>
